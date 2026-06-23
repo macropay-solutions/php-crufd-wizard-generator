@@ -1,0 +1,17 @@
+<?php
+
+namespace DummyNamespace\Http\Middleware\Decorators;
+
+use DummyNamespace\Decorators\DummyModelDecorator;
+use DummyNamespace\ModelsDummyFolderConnection\DummyModel;
+use MacropaySolutions\CrufdWizardDecorator\Http\Middleware\Decorators\AbstractDecoratorMiddleware;
+
+class DummyClass extends AbstractDecoratorMiddleware
+{
+    protected string $decoratorClass = DummyModelDecorator::class;
+
+    public function setResourceModel(): void
+    {
+        $this->resourceModel = new DummyModel();
+    }
+}

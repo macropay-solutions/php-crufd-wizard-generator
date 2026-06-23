@@ -1,0 +1,36 @@
+{
+    "name": "macropay-solutions/php-crufd-wizard-generator",
+    "type": "library",
+    "description": "Library for php-crufd-wizard class generation",
+    "license": "MIT",
+    "keywords": [
+        "crud",
+        "crufd",
+        "rest",
+        "rest-api",
+        "generator"
+    ],
+    "require": {
+        "php": "^8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MacropaySolutions\\CrufdWizardGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MacropaySolutions\\CrufdWizardGenerator\\Test\\": "tests/"
+        }
+    },
+    "suggest": {
+        "macropay-solutions/php-framework": "dev-production",
+        "macropay-solutions/php-kernel": "dev-production",
+        "macropay-solutions/php-crufd-wizard": "*",
+        "macropay-solutions/php-crufd-wizard-decorator": "*"
+    },
+    "require-dev": {
+        "macropay-solutions/php-kernel": "^1.0"
+    },
+    "minimum-stability": "RC"
+}

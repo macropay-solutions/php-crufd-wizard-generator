@@ -1,0 +1,31 @@
+<?php
+
+namespace DummyNamespace\Services;
+
+use DummyNamespace\ModelsDummyFolderConnection\DummyModel;
+use MacropaySolutions\CrufdWizard\Services\BaseResourceService;
+
+class DummyClass extends BaseResourceService
+{
+    /**
+     * @inheritDoc
+     */
+    protected function setBaseModel(): void
+    {
+        $this->model = new DummyModel();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function extractIdentifierConditions(string $identifier): array
+    {
+        $exploded = \explode($this->model::COMPOSITE_PK_SEPARATOR, $identifier);
+
+        return [
+            ['id_1', \reset($exploded)], // todo
+            ['id_2', \next($exploded)], // todo
+            // ... todo
+        ];
+    }
+}

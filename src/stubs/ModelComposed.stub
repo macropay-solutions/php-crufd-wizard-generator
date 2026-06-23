@@ -1,0 +1,44 @@
+<?php
+
+namespace DummyNamespace\ModelsDummyFolderConnection;
+
+use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassAttributes;
+use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassRelations;
+use MacropaySolutions\CrufdWizard\Models\BaseModel;
+
+/**
+ * @property DummyClassAttributes $a
+ * @property DummyClassRelations $r
+ * @mixin DummyClassAttributes
+ * @mixin DummyClassRelations
+ */
+class DummyClass extends BaseModel
+{
+    public const RESOURCE_NAME = 'DummyResourceName';
+DummyConnection
+    protected $primaryKey = '';
+    protected $keyType = 'string';
+    protected $table = 'DummyTableName';
+    protected array $ignoreExternalCreateFor = [
+        'updated_at',
+    ];
+    protected array $ignoreUpdateFor = [
+        'created_at',
+    ];
+    protected array $allowNonExternalUpdatesFor = [
+        'updated_at',
+    ];
+
+    protected $fillable = [
+DummyFillable
+    ];
+
+    public function getPrimaryKeyFilter(): array
+    {
+        return [
+            'id_1' => $this->getAttributeValue('id_1'), // todo
+            'id_2' => $this->getAttributeValue('id_2'), // todo
+            // ... todo
+        ];
+    }
+}

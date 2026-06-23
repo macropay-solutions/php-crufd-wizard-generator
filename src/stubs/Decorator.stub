@@ -1,0 +1,37 @@
+<?php
+
+namespace DummyNamespace\Decorators;
+
+use MacropaySolutions\CrufdWizardDecorator\Decorators\AbstractResourceDecorator;
+
+class DummyClass extends AbstractResourceDecorator
+{
+    public function getResourceMappings(): array
+    {
+        return [
+DummyMap
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRelationMappings(): array
+    {
+        return [
+//            'relationName' => [
+//                'relColumn' => 'decoratedRelColumn',
+//            ],
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getComposedColumns(): array
+    {
+        return [
+            // 'custom' => fn(array $row): string => '',
+        ];
+    }
+}

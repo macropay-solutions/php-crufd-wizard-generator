@@ -1,0 +1,13 @@
+<?php
+
+namespace DummyNamespace\ModelsDummyFolderConnection\Attributes;
+
+use MacropaySolutions\CrufdWizard\Models\Attributes\BaseModelRelations;
+
+/**
+// * @property-read OneRelationExample|null $oneRelationExample
+// * @property-read \Illuminate\Database\Eloquent\Collection<int, ManyRelationExample> $manyRelationExample
+ */
+class DummyClassRelations extends BaseModelRelations
+{
+}

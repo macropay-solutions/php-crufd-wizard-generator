@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace\ModelsDummyFolderConnection\Attributes;
+
+use MacropaySolutions\CrufdWizard\Models\Attributes\BaseModelAttributes;
+
+DummyDockBlock
+class DummyClassAttributes extends BaseModelAttributes
+{
+}

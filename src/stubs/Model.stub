@@ -1,0 +1,65 @@
+<?php
+
+namespace DummyNamespace\ModelsDummyFolderConnection;
+
+use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassAttributes;
+use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassRelations;
+use MacropaySolutions\CrufdWizard\Models\BaseModel;
+
+/**
+ * @property DummyClassAttributes $a
+ * @property DummyClassRelations $r
+ * @mixin DummyClassAttributes
+ * @mixin DummyClassRelations
+ */
+class DummyClass extends BaseModel
+{
+    public const RESOURCE_NAME = 'DummyResourceName';
+DummyConnection
+    protected $primaryKey = 'id';
+    protected $keyType = 'int';
+    protected $table = 'DummyTableName';
+    protected array $ignoreExternalCreateFor = [
+        'id',
+        'updated_at',
+    ];
+    protected array $ignoreUpdateFor = [
+        'id',
+        'created_at',
+    ];
+    protected array $allowNonExternalUpdatesFor = [
+        'updated_at',
+    ];
+
+    protected $fillable = [
+DummyFillable
+    ];
+
+     /**
+     * Override this if you prefer to separate your relations definitions from the model's methods
+     * DO NOT USE static closures!
+     * There is no check/validation for this structure so make sure you declare it right.
+     *
+     *  return [
+     *      'relName' => fn(): HasOne => $this->hasOne(Model::class, 'model_id', 'id'),
+     *      // Reuse the segregated relation inside another segregated relation:
+     *      'relNameScoped' => fn(): HasOne => $this->relName()->where('col', '=', 'text'),
+     *      'relNameScoped2' => fn(): HasOne => $this->callSegregatedRelation('relName')->where('col', '=', 'text'),
+     *      // Reuse the method relation:
+     *      'relNameAsMethod' => fn(): HasOne => $this->relNameAsMethod(),
+     *      // AVOID THESE:
+     *      'relNameAsMethod' => $this->relNameAsMethod(...), // hard-binds closure scope to the first booted model
+     *      'relNameAsMethod' => [$this, 'relNameAsMethod'], // is not a Closure
+     *      'relNameAsMethod' => fn(): HasOne => [$this, 'relNameAsMethod'](),
+     *      // DO NOT USE IT LIKE THIS!:
+     *      'relNameAsMethod' => fn(): HasOne => $this->relNameAsMethod(...)(), // executes the relation inside the map.
+     *  ];
+     *
+     */
+    protected function segregatedRelationsDefinitionMap(): array
+    {
+        return [
+            //
+        ];
+    }
+}

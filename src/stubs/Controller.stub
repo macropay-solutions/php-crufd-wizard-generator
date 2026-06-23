@@ -1,0 +1,54 @@
+<?php
+
+namespace DummyNamespace\Http\Controllers;
+
+use DummyNamespace\Services\DummyService;
+use Illuminate\Http\Request;
+use MacropaySolutions\CrufdWizard\Helpers\GeneralHelper;
+use MacropaySolutions\CrufdWizard\Http\Controllers\ResourceControllerTrait;
+
+class DummyClass extends Controller
+{
+    use ResourceControllerTrait;
+
+    /**
+     * @throws \Throwable
+     */
+    public function __construct()
+    {
+        $this->init();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected function setResourceService(): void
+    {
+        $this->resourceService = GeneralHelper::app(DummyService::class);
+    }
+
+    protected function setModelFqnToControllerMap(): void
+    {
+        $this->modelFqnToControllerMap = DbCrudMap::MODEL_FQN_TO_CONTROLLER_MAP;
+    }
+
+    /**
+     * @throws \Throwable
+     */
+    protected function validateCreateRequest(Request $request): array
+    {
+        return \validator($request->all(), [
+DummyMapCreate
+        ])->validated();
+    }
+
+    /**
+     * @throws \Throwable
+     */
+    protected function validateUpdateRequest(Request $request): array
+    {
+        return \validator($request->all(), [
+DummyMapUpdate
+        ])->validated();
+    }
+}

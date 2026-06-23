@@ -1,0 +1,17 @@
+<?php
+
+namespace DummyNamespace\Services;
+
+use DummyNamespace\ModelsDummyFolderConnection\DummyModel;
+use MacropaySolutions\CrufdWizard\Services\BaseResourceService;
+
+class DummyClass extends BaseResourceService
+{
+    /**
+     * @inheritDoc
+     */
+    protected function setBaseModel(): void
+    {
+        $this->model = new DummyModel();
+    }
+}
