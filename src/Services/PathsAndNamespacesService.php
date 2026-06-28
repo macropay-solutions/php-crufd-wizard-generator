@@ -2,7 +2,7 @@
 
 namespace MacropaySolutions\CrufdWizardGenerator\Services;
 
-use Illuminate\Support\Str;
+use MacropaySolutions\Kernel\Support\Str;
 
 class PathsAndNamespacesService
 {

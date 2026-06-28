@@ -2,8 +2,8 @@
 
 namespace MacropaySolutions\CrufdWizardGenerator\Services;
 
-use Illuminate\Console\Concerns\InteractsWithIO;
-use Illuminate\Support\Str;
+use MacropaySolutions\Kernel\Console\Concerns\InteractsWithIO;
+use MacropaySolutions\Kernel\Support\Str;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
 class MakeModelService

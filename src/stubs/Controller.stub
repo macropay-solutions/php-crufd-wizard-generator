@@ -3,7 +3,7 @@
 namespace DummyNamespace\Http\Controllers;
 
 use DummyNamespace\Services\DummyService;
-use Illuminate\Http\Request;
+use MacropaySolutions\Kernel\Http\Request;
 use MacropaySolutions\CrufdWizard\Helpers\GeneralHelper;
 use MacropaySolutions\CrufdWizard\Http\Controllers\ResourceControllerTrait;
 

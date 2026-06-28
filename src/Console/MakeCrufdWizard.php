@@ -2,12 +2,12 @@
 
 namespace MacropaySolutions\CrufdWizardGenerator\Console;
 
-use Illuminate\Console\Command;
 use MacropaySolutions\CrufdWizardGenerator\Services\MakeControllerService;
 use MacropaySolutions\CrufdWizardGenerator\Services\MakeDecoratorService;
 use MacropaySolutions\CrufdWizardGenerator\Services\MakeMiddlewareService;
 use MacropaySolutions\CrufdWizardGenerator\Services\MakeModelService;
 use MacropaySolutions\CrufdWizardGenerator\Services\MakeServiceService;
+use MacropaySolutions\Kernel\Console\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

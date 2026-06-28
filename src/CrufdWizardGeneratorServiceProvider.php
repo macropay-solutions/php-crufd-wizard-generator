@@ -2,8 +2,8 @@
 
 namespace MacropaySolutions\CrufdWizardGenerator;
 
-use Illuminate\Support\ServiceProvider;
 use MacropaySolutions\CrufdWizardGenerator\Console\MakeCrufdWizard;
+use MacropaySolutions\Kernel\Support\ServiceProvider;
 
 class CrufdWizardGeneratorServiceProvider extends ServiceProvider
 {
