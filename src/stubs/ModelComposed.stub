@@ -14,6 +14,8 @@ use MacropaySolutions\CrufdWizard\Models\BaseModel;
  */
 class DummyClass extends BaseModel
 {
+    public static string $baseModelAttributesFqn = DummyClassAttributes::class;
+    public static string $baseModelRelationsFqn = DummyClassRelations::class;
     public const RESOURCE_NAME = 'DummyResourceName';
 DummyConnection
     protected $primaryKey = '';
