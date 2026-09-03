@@ -4,6 +4,8 @@ namespace DummyNamespace\ModelsDummyFolderConnection;
 
 use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassAttributes;
 use DummyNamespace\ModelsDummyFolderConnection\Attributes\DummyClassRelations;
+//use MacropaySolutions\CrufdWizard\Models\Attributes\BaseModelLazyAttributes;
+//use MacropaySolutions\CrufdWizard\Models\Attributes\BaseModelLazyRelations;
 use MacropaySolutions\CrufdWizard\Models\BaseModel;
 
 /**
@@ -34,6 +36,19 @@ DummyConnection
     protected $fillable = [
 DummyFillable
     ];
+
+//    public DummyClassAttributes $a {
+//        get => $this->A ??= BaseModelLazyAttributes::getAbstractBaseModelAttributes(\WeakReference::create($this));
+//    }
+//
+//    public DummyClassRelations $r {
+//        get => $this->R ??= BaseModelLazyRelations::getAbstractBaseModelAttributes(\WeakReference::create($this));
+//    }
+//
+//    public function __get($key)
+//    {
+//        return $this->getAttribute($key);
+//    }
 
     public function getPrimaryKeyFilter(): array
     {
