@@ -47,7 +47,7 @@ DummyFillable
 //        get => $this->R ??= BaseModelLazyRelations::getAbstractBaseModelAttributes(\WeakReference::create($this));
 //    }
 //
-//    public function __get($key): mixed
+//    public function __get(string $key): mixed
 //    {
 //        return $this->getAttribute($key);
 //    }
