@@ -20,9 +20,10 @@ class DummyClass extends BaseModel
     public static ?string $baseModelRelationsFqn = DummyClassRelations::class;
     public const RESOURCE_NAME = 'DummyResourceName';
 DummyConnection
-    protected $primaryKey = '';
-    protected $keyType = 'string';
-    protected $table = 'DummyTableName';
+    protected string $primaryKey = '';
+    protected string $keyType = 'string';
+    public bool $incrementing = false;
+    protected string $table = 'DummyTableName';
     protected array $ignoreExternalCreateFor = [
         'updated_at',
     ];
@@ -33,7 +34,7 @@ DummyConnection
         'updated_at',
     ];
 
-    protected $fillable = [
+    protected array $fillable = [
 DummyFillable
     ];
 
@@ -45,7 +46,7 @@ DummyFillable
 //        get => $this->R ??= BaseModelLazyRelations::getAbstractBaseModelAttributes(\WeakReference::create($this));
 //    }
 //
-//    public function __get($key)
+//    public function __get($key): mixed
 //    {
 //        return $this->getAttribute($key);
 //    }
