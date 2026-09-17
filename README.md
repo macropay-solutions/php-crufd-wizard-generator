@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/macropay-solutions/php-crufd-wizard-generator)](https://packagist.org/packages/macropay-solutions/php-crufd-wizard-generator)
 [![License](https://img.shields.io/packagist/l/macropay-solutions/php-crufd-wizard-generator)](https://packagist.org/packages/macropay-solutions/php-crufd-wizard-generator)
 
-Library for RetrieveQL [php-crufd-wizard](https://github.com/macropay-solutions/php-crufd-wizard) and for [php-crufd-wizard-decorator](https://github.com/macropay-solutions/php-crufd-wizard-decorator)
+Library for CrufdQL [php-crufd-wizard](https://github.com/macropay-solutions/php-crufd-wizard) and for [php-crufd-wizard-decorator](https://github.com/macropay-solutions/php-crufd-wizard-decorator)
 
 ## Installation
 
