@@ -32,5 +32,6 @@
     "require-dev": {
         "macropay-solutions/php-kernel": "^1.0"
     },
-    "minimum-stability": "RC"
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
